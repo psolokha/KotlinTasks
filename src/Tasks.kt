@@ -1,5 +1,6 @@
 fun main(args: Array<String>) {
     task1()
+    task2()
 }
 
 fun task1() {
@@ -8,4 +9,10 @@ fun task1() {
     var otherVar = anyVar
     var dividedVar = otherVar/2.5
     println(dividedVar is Double)
+}
+
+fun task2() {
+    var helloString = "hello"
+    var aplanaString = "aplana"
+    println("${helloString} ${aplanaString}")
 }
