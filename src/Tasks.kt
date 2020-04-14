@@ -2,6 +2,7 @@ fun main(args: Array<String>) {
     task1()
     task2()
     task3()
+    task4()
 }
 
 fun task1() {
@@ -26,4 +27,10 @@ fun task3() {
     five.toDouble()
     five.toFloat()
     five.toLong()
+}
+
+fun task4() {
+    println("Please, type your name:")
+    var userName = readLine()
+    println("Hi, $userName")
 }
