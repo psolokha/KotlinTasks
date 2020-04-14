@@ -3,6 +3,7 @@ fun main(args: Array<String>) {
     task2()
     task3()
     task4()
+    task5()
 }
 
 fun task1() {
@@ -33,4 +34,9 @@ fun task4() {
     println("Please, type your name:")
     var userName = readLine()
     println("Hi, $userName")
+}
+
+fun task5() {
+    var range = 'z' downTo 'a'
+    for (a in range) print(a)
 }
