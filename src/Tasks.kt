@@ -1,6 +1,7 @@
 fun main(args: Array<String>) {
     task1()
     task2()
+    task3()
 }
 
 fun task1() {
@@ -15,4 +16,14 @@ fun task2() {
     var helloString = "hello"
     var aplanaString = "aplana"
     println("${helloString} ${aplanaString}")
+}
+
+fun task3() {
+    var five: Char = '5'
+    five.toByte()
+    five.toShort()
+    five.toInt()
+    five.toDouble()
+    five.toFloat()
+    five.toLong()
 }
