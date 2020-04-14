@@ -4,6 +4,7 @@ fun main(args: Array<String>) {
     task3()
     task4()
     task5()
+    task6()
 }
 
 fun task1() {
@@ -39,4 +40,13 @@ fun task4() {
 fun task5() {
     var range = 'z' downTo 'a'
     for (a in range) print(a)
+}
+
+fun task6() {
+    print("Please, type number a:")
+    var a = readLine()
+    print("Please, type number b:")
+    var b = readLine()
+    var checkResult = a!!.toInt() > b!!.toInt()
+    println("a > b? $checkResult")
 }
