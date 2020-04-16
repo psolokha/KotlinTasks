@@ -18,3 +18,7 @@ fun task8() {
     }
 }
 
+fun calc(dep: Double, rate: Double) : Double {
+    return 0.01*dep*rate/12
+}
+
