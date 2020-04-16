@@ -1,6 +1,7 @@
 fun main(args: Array<String>) {
     task8()
     task9()
+    task11()
 }
 
 fun task8() {
@@ -34,5 +35,24 @@ fun task9() {
         }
         println()
     }
+}
 
+fun task11() {
+    var workSpace: MutableMap<Int, String> = HashMap()
+    workSpace.put(31, "Ivan Ivanov")
+    workSpace.put(24, "Petr Petrov")
+    workSpace.put(35, "Sidor Sidorov")
+    workSpace.put(42, "Alixandr Alexandrov")
+    workSpace.put(56, "Pavel Pavlov")
+
+    println("Список рабочих мест:")
+    for (n in workSpace.keys) print("$n\t")
+    println()
+    println("Введите номер места чтобы узнать имя сотрудника:")
+    val seatNum: Int = readLine()!!.toInt()
+    if (workSpace.keys.contains(seatNum)) {
+        println(workSpace.get(seatNum))
+    } else {
+        println("Неправильно введен номер")
+    }
 }
