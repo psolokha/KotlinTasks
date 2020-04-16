@@ -1,5 +1,6 @@
 fun main(args: Array<String>) {
     task8()
+    task9()
 }
 
 fun task8() {
@@ -22,3 +23,16 @@ fun calc(dep: Double, rate: Double) : Double {
     return 0.01*dep*rate/12
 }
 
+fun task9() {
+    val table : Array<Array<String>> = Array(3) {Array(3) {""} }
+    table[0] = arrayOf("Japan", "China", "USA")
+    table[1] = arrayOf("Tokio", "Beijing", "Washington")
+    table[2] = arrayOf("JPY", "CNY", "USD")
+    for (i in 0 until table.size) {
+        for (j in 0 until table.size) {
+                print("${table[j][i]}\t")
+        }
+        println()
+    }
+
+}
