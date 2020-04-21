@@ -2,6 +2,7 @@ fun main(args: Array<String>) {
     task12()
     task13()
     task14()
+    task15()
 }
 
 fun task12() {
@@ -28,4 +29,11 @@ fun task14() {
     printEmployee("Petr petrov", false, "administrator")
     printEmployee("Sidor Sidorov", 55, "hr")
     printEmployee("Vladimir Volodin", "director")
+}
+
+fun task15() {
+    val printStr = {str:Array<String> -> for (s in str) println(s)}
+    val arrStr : Array<String> = arrayOf("1","2","3","4")
+    printStr(arrStr)
+
 }
