@@ -1,6 +1,7 @@
 fun main(args: Array<String>) {
     task12()
     task13()
+    task14()
 }
 
 fun task12() {
@@ -20,4 +21,11 @@ fun task13() {
 
 fun staff(vararg name:String): Int {
     return name.size
+}
+
+fun task14() {
+    printEmployee("Ivan Ivanov", 34, true, "manager")
+    printEmployee("Petr petrov", false, "administrator")
+    printEmployee("Sidor Sidorov", 55, "hr")
+    printEmployee("Vladimir Volodin", "director")
 }
