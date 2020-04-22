@@ -9,7 +9,12 @@ fun task18() {
 }
 
 fun task19(){
-    println(Boeing747().passengers)
+    println(Boeing747(350).passengers)
+}
+
+fun task20() {
+    val plane = Boeing747(345)
+    println(plane.passengers)
 }
 
 open class Aircraft {
@@ -25,6 +30,13 @@ class Aircraft2(val planeID : Int, val maxFlightRange : Int, val capacity : Int)
         get() = capacity.toDouble()/maxFlightRange*100
 }
 
-class Boeing747 : Aircraft() {
-    var passengers : Int = 350
+class Boeing747(val numPass : Int) : Aircraft(), Passenger {
+    override val passengers : Int
+    init {
+        passengers = numPass
+    }
+}
+
+interface Passenger {
+    val passengers : Int
 }
