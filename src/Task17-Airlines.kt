@@ -8,7 +8,11 @@ fun task18() {
     println(airbus.fuelCons)
 }
 
-class Aircraft {
+fun task19(){
+    println(Boeing747().passengers)
+}
+
+open class Aircraft {
     val planeID : Int = 12345
     val maxFlightRange : Int = 6000
     val capacity : Int = 30
@@ -19,4 +23,8 @@ class Aircraft {
 class Aircraft2(val planeID : Int, val maxFlightRange : Int, val capacity : Int) {
     var fuelCons : Double = 0.5
         get() = capacity.toDouble()/maxFlightRange*100
+}
+
+class Boeing747 : Aircraft() {
+    var passengers : Int = 350
 }
