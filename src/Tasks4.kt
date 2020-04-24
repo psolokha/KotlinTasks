@@ -3,4 +3,5 @@ fun main(args: Array<String>) {
     task18()
     task19()
     task20()
+    task21()
 }
