@@ -19,13 +19,18 @@ fun task20() {
 
 fun task21() {
     val jumbo = Boeing747(345)
-    println(jumbo.fuelCons)
+}
+
+fun task22() {
+    val jumboJet = Boeing747(325)
+    jumboJet.numPass()
 }
 
 abstract class Aircraft {
-    abstract val maxFlightRange : Int
-    abstract val capacity : Int
-    abstract val fuelCons : Double
+    protected abstract val maxFlightRange : Int
+    protected abstract val capacity : Int
+    protected abstract val fuelCons : Double
+    protected abstract fun info()
 }
 
 class Aircraft2(private val maxFlightRange: Int, private val capacity: Int) {
@@ -39,8 +44,15 @@ class Boeing747(numPass : Int) : Aircraft(), Passenger {
     override val fuelCons: Double
         get() = capacity.toDouble()/maxFlightRange*100
     override val passengers : Int = numPass
+    override fun info() {
+        println("Number of passengers: $passengers")
+    }
+    override fun numPass() {
+        println("Num of pass: $passengers")
+    }
 }
 
 interface Passenger {
     val passengers : Int
+    fun numPass()
 }
